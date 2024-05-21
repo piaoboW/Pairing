@@ -63,6 +63,7 @@ where $P$ and $Q$ are points on the elliptic curve, and $\hat{t}(P, Q)$ is defin
 The core of Miller's algorithm is to construct a rational function $f_{r,P}$ on an elliptic curve whose divisor satisfies the Miller equation: $div(f_{r,P}) = r[P]  -[rP]-(r-1)[\mathcal{O}]$. The algorithm has a complexity of $O(\log r)$. A commonly used implementation of the Miller loop is as follows.
 
 ![The Miller Loop](<fig/Miller loop.png>)
+
 *Fig. 1 The Miller Loop*
 
 The parameters involved are:
@@ -99,6 +100,7 @@ Below are some common optimization techniques for Miller's algorithm that levera
 For example, in [2], the optimized algorithm is written as:
 
 ![](<fig/Optimized  Miller loop.png>)
+
 *Fig. 2 The Optimized Algorithm of Miller Loop*
 
 The optimizations here are: 
@@ -198,6 +200,7 @@ In Section 4, we mentioned four directions for Miller loop optimization, as foll
 Reference [2] presents an enhanced Miller's algorithm, incorporating optimizations such as reducing the number of iterations, precomputing Lines and  eliminating the final exponentiation. The figure below illustrates a comparative analysis of its operational characteristics against the conventional algorithm.
 
 ![alt text](<fig/Algorithm Compare.png>)
+
 *Fig. 3 Comparison of Algorithms Before and After Optimization. ① Replace binary encoding with NAF encoding to reduce the Hamming weight of the encoding; ② Optimize line evaluation using Precomputing Lines.*
 
 In Fig.3, we can note that the new algorithm mainly involves two optimization processes, which are: 
